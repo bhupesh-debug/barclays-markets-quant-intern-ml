@@ -1,0 +1,99 @@
+{
+  "assets": [
+    "EQ",
+    "CREDIT",
+    "RATES",
+    "FX",
+    "MUNI",
+    "SEC"
+  ],
+  "desk_map": {
+    "EQ": "Equities",
+    "CREDIT": "Credit",
+    "RATES": "Rates",
+    "FX": "Foreign Exchange",
+    "MUNI": "Municipals",
+    "SEC": "Securitized Products"
+  },
+  "n_feature_rows": 7140,
+  "oos_days": 940,
+  "summary": [
+    {
+      "model": "momentum_rule",
+      "n_days": 940,
+      "hit_rate": 0.502127659574468,
+      "mean_daily_bp": 1.1409245476464829,
+      "sharpe": 0.7068477193892253,
+      "total_return_pct": 10.977297825078946,
+      "max_drawdown_pct": -5.097691660838834,
+      "mean_ic": 0.04600154010669832,
+      "mean_turnover": 0.0925531914893617
+    },
+    {
+      "model": "linear",
+      "n_days": 940,
+      "hit_rate": 0.5113475177304964,
+      "mean_daily_bp": 0.990423691575209,
+      "sharpe": 0.5932636613194627,
+      "total_return_pct": 9.394939113644952,
+      "max_drawdown_pct": -5.366082347771465,
+      "mean_ic": 0.022954733903144252,
+      "mean_turnover": 0.1322695035460993
+    },
+    {
+      "model": "logistic",
+      "n_days": 940,
+      "hit_rate": 0.5090425531914894,
+      "mean_daily_bp": 0.7712997169564708,
+      "sharpe": 0.4327235881047418,
+      "total_return_pct": 7.1152710420181675,
+      "max_drawdown_pct": -8.071192963510645,
+      "mean_ic": 0.02903922360155001,
+      "mean_turnover": 0.11382978723404255
+    },
+    {
+      "model": "random_forest",
+      "n_days": 940,
+      "hit_rate": 0.49858156028368794,
+      "mean_daily_bp": -2.112259718969719,
+      "sharpe": -1.280046824652588,
+      "total_return_pct": -18.274113866870845,
+      "max_drawdown_pct": -19.383125944554866,
+      "mean_ic": -0.00460153380014163,
+      "mean_turnover": 0.2581560283687943
+    }
+  ],
+  "insample_accuracy": {
+    "momentum_rule": 0.503781512605042,
+    "logistic": 0.515126050420168,
+    "linear": 0.5079831932773109,
+    "random_forest": 0.6831932773109244
+  },
+  "regimes": {
+    "momentum_rule": {
+      "sharpe_high_vol": -0.24454377385450596,
+      "sharpe_low_vol": 1.6951857058435376,
+      "n_high": 477,
+      "n_low": 463
+    },
+    "logistic": {
+      "sharpe_high_vol": 0.14916555357067257,
+      "sharpe_low_vol": 0.7284006930108318,
+      "n_high": 477,
+      "n_low": 463
+    },
+    "linear": {
+      "sharpe_high_vol": 0.4811624252916504,
+      "sharpe_low_vol": 0.6967698731487673,
+      "n_high": 477,
+      "n_low": 463
+    },
+    "random_forest": {
+      "sharpe_high_vol": -1.3650726870080303,
+      "sharpe_low_vol": -1.190680815336725,
+      "n_high": 477,
+      "n_low": 463
+    }
+  },
+  "synthetic_data": true
+}
